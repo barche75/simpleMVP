@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		BF710C6F245DC072000957CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C6E245DC072000957CF /* AppDelegate.swift */; };
 		BF710C71245DC072000957CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C70245DC072000957CF /* SceneDelegate.swift */; };
-		BF710C73245DC072000957CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C72245DC072000957CF /* ContentView.swift */; };
+		BF710C73245DC072000957CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C72245DC072000957CF /* MainView.swift */; };
 		BF710C75245DC073000957CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF710C74245DC073000957CF /* Assets.xcassets */; };
-		BF710C78245DC073000957CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF710C77245DC073000957CF /* Preview Assets.xcassets */; };
 		BF710C7B245DC073000957CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF710C79245DC073000957CF /* LaunchScreen.storyboard */; };
 		BF710C86245DC073000957CF /* simpleMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C85245DC073000957CF /* simpleMVPTests.swift */; };
+		BF710C95245DC1C6000957CF /* MainView_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C94245DC1C6000957CF /* MainView_UI.swift */; };
+		BF710C97245DC517000957CF /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C96245DC517000957CF /* MainViewPresenter.swift */; };
+		BF710C9A245DC57E000957CF /* MainViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C99245DC57E000957CF /* MainViewProtocol.swift */; };
+		BF710C9C245DC594000957CF /* MainViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF710C9B245DC594000957CF /* MainViewPresenterProtocol.swift */; };
+		BF710CA0245DD3F4000957CF /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = BF710C9E245DD3F4000957CF /* Preview Content */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +34,18 @@
 		BF710C6B245DC072000957CF /* simpleMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF710C6E245DC072000957CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF710C70245DC072000957CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF710C72245DC072000957CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF710C72245DC072000957CF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BF710C74245DC073000957CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF710C77245DC073000957CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF710C7A245DC073000957CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF710C7C245DC073000957CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF710C81245DC073000957CF /* simpleMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleMVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF710C85245DC073000957CF /* simpleMVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleMVPTests.swift; sourceTree = "<group>"; };
 		BF710C87245DC073000957CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF710C94245DC1C6000957CF /* MainView_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView_UI.swift; sourceTree = "<group>"; };
+		BF710C96245DC517000957CF /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		BF710C99245DC57E000957CF /* MainViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewProtocol.swift; sourceTree = "<group>"; };
+		BF710C9B245DC594000957CF /* MainViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		BF710C9E245DD3F4000957CF /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,23 +87,15 @@
 		BF710C6D245DC072000957CF /* simpleMVP */ = {
 			isa = PBXGroup;
 			children = (
+				BF710C93245DC1A5000957CF /* MainView_unit */,
 				BF710C6E245DC072000957CF /* AppDelegate.swift */,
 				BF710C70245DC072000957CF /* SceneDelegate.swift */,
-				BF710C72245DC072000957CF /* ContentView.swift */,
 				BF710C74245DC073000957CF /* Assets.xcassets */,
 				BF710C79245DC073000957CF /* LaunchScreen.storyboard */,
 				BF710C7C245DC073000957CF /* Info.plist */,
-				BF710C76245DC073000957CF /* Preview Content */,
+				BF710C9E245DD3F4000957CF /* Preview Content */,
 			);
 			path = simpleMVP;
-			sourceTree = "<group>";
-		};
-		BF710C76245DC073000957CF /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				BF710C77245DC073000957CF /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		BF710C84245DC073000957CF /* simpleMVPTests */ = {
@@ -105,6 +105,50 @@
 				BF710C87245DC073000957CF /* Info.plist */,
 			);
 			path = simpleMVPTests;
+			sourceTree = "<group>";
+		};
+		BF710C90245DC162000957CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF710C72245DC072000957CF /* MainView.swift */,
+				BF710C94245DC1C6000957CF /* MainView_UI.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF710C91245DC187000957CF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BF710C96245DC517000957CF /* MainViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BF710C92245DC199000957CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF710C93245DC1A5000957CF /* MainView_unit */ = {
+			isa = PBXGroup;
+			children = (
+				BF710C92245DC199000957CF /* Model */,
+				BF710C90245DC162000957CF /* View */,
+				BF710C91245DC187000957CF /* Presenter */,
+				BF710C98245DC55D000957CF /* Protocols */,
+			);
+			path = MainView_unit;
+			sourceTree = "<group>";
+		};
+		BF710C98245DC55D000957CF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF710C99245DC57E000957CF /* MainViewProtocol.swift */,
+				BF710C9B245DC594000957CF /* MainViewPresenterProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,8 +232,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF710CA0245DD3F4000957CF /* Preview Content in Resources */,
 				BF710C7B245DC073000957CF /* LaunchScreen.storyboard in Resources */,
-				BF710C78245DC073000957CF /* Preview Assets.xcassets in Resources */,
 				BF710C75245DC073000957CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,8 +253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF710C6F245DC072000957CF /* AppDelegate.swift in Sources */,
+				BF710C95245DC1C6000957CF /* MainView_UI.swift in Sources */,
+				BF710C97245DC517000957CF /* MainViewPresenter.swift in Sources */,
+				BF710C9C245DC594000957CF /* MainViewPresenterProtocol.swift in Sources */,
+				BF710C9A245DC57E000957CF /* MainViewProtocol.swift in Sources */,
 				BF710C71245DC072000957CF /* SceneDelegate.swift in Sources */,
-				BF710C73245DC072000957CF /* ContentView.swift in Sources */,
+				BF710C73245DC072000957CF /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
